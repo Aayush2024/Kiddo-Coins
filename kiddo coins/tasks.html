@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Task Manager</title>
+    <link rel="stylesheet" href="T.css">
+    <style></style>
+</head>
+<body>
+    <header>
+        <h1>Kids Task Manager</h1>
+    </header>
+
+    <form id="taskForm">
+        <label for="age">Select Age:</label>
+        <select id="age" name="age" required>
+            <option value="" disabled selected>Select age</option>
+            <option value="3">3 years</option>
+            <option value="4">4 years</option>
+            <option value="5">5 years</option>
+            <option value="6">6 years</option>
+            <option value="7">7 years</option>
+            <option value="8">8 years</option>
+            <option value="9">9 years</option>
+        </select>
+
+        <label for="class">Select Class:</label>
+        <select id="class" name="class" required>
+            <option value="" disabled selected>Select class</option>
+            <option value="1">LKG</option>
+            <option value="2">UKG</option>
+            <option value="3">Class 1</option>
+            <option value="4">Class 2</option>
+            <option value="5">Class 3</option>
+            <option value="6">Class 4</option>
+        </select>
+
+        <label for="subject">Favorite Subject:</label>
+        <select id="subject" name="subject" required>
+            <option value="" disabled selected>Select subject</option>
+            <option value="english">English</option>
+            <option value="math">Math</option>
+            <option value="science">Science</option>
+            
+        </select>
+
+        <button type="submit">Get Task</button>
+    </form>
+    <h3 ><a href="front.html">Back To Home Page</a></h3>
+
+    <script>
+        document.getElementById('taskForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const age = document.getElementById('age').value;
+            const subject = document.getElementById('subject').value;
+
+            const url = `list.html?age=${age}&subject=${subject}`;
+            window.location.href = url;
+        });
+    </script>
+</body>
+</html>

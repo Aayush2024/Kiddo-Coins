@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Task</title>
+    <link rel="stylesheet" href="T.css">
+</head>
+<body>
+    <header>
+        <h1>Your Task</h1>
+    </header>
+
+    <div id="taskDisplay"></div>
+
+    <div id="uploadSection" style="display: none;">
+        <h2>Upload Task Completion Video</h2>
+        <form id="uploadForm">
+            <input type="file" id="videoUpload" accept="video/*" required>
+          
+            <a href="success.html" class="button">Upload Video</a>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const age = urlParams.get('age');
+            const subject = urlParams.get('subject');
+
+            let task = '';
+            if (subject === 'math') {
+                if (age == 3) {
+                    task = "Your task is to count from 1 to 10 using your fingers.";
+                } else if (age == 4) {
+                    task = "Your task is to learn and write numbers from 1 to 10.";
+                } else if (age == 5) {
+                    task = "Your task is to count and write numbers from 1 to 20.";
+                } else if (age == 6) {
+                    task = "Your task is to write the multiplication table from 2 to 5.";
+                } else if (age == 7) {
+                    task = "Your task is to write the multiplication table from 2 to 10.";
+                } else if (age == 8) {
+                    task = "Your task is to solve simple addition and subtraction problems.";
+                } else if (age == 9) {
+                    task = "Your task is to solve multiplication and division problems.";
+                }
+            } else if (subject === 'english') {
+                if (age == 3) {
+                    task = "Your task is to learn and recite the alphabet A to Z.";
+                } else if (age == 4) {
+                    task = "Your task is to learn and write the alphabet A to Z.";
+                } else if (age == 5) {
+                    task = "Your task is to learn and write simple three-letter words (e.g., cat, dog).";
+                } else if (age == 6) {
+                    task = "Your task is to read and write simple sentences (e.g., 'I like apples.').";
+                } else if (age == 7) {
+                    task = "Your task is to learn and write five new vocabulary words.";
+                } else if (age == 8) {
+                    task = "Your task is to write a short paragraph about your favorite animal.";
+                } else if (age == 9) {
+                    task = "Your task is to write a short story with a beginning, middle, and end.";
+                }
+            } else if (subject === 'science') {
+                if (age == 3) {
+                    task = "Your task is to learn and identify basic colors.";
+                } else if (age == 4) {
+                    task = "Your task is to learn and identify different shapes (circle, square, triangle).";
+                } else if (age == 5) {
+                    task = "Your task is to identify and name five different animals.";
+                } else if (age == 6) {
+                    task = "Your task is to learn about the five senses and name them.";
+                } else if (age == 7) {
+                    task = "Your task is to learn and describe the basic parts of a plant (root, stem, leaves).";
+                } else if (age == 8) {
+                    task = "Your task is to learn about and describe the water cycle (evaporation, condensation, precipitation).";
+                } else if (age == 9) {
+                    task = "Your task is to learn and explain the different states of matter (solid, liquid, gas).";
+                }
+            }
+
+            document.getElementById('taskDisplay').innerHTML = `<h2>Your Task</h2><p>${task}</p>`;
+            document.getElementById('uploadSection').style.display = 'block';
+        });
+
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const file = document.getElementById('videoUpload').files[0];
+            alert(`Video ${file.name} uploaded successfully!`);
+        });
+    </script>
+</body>
+</html>

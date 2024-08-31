@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppinsz;wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: url(AYU3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section{
+    height: 100vh;
+
+   scroll-snap-align: start;
+    scroll-behavior: smooth;
+}
+
+.text{
+    
+    animation: appear 0.4s linear;
+   
+}
+
+.two{
+   
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 10%;
+
+    align-items: center;
+    display: flex;
+    margin-left: 90px;
+    
+    min-height: 100vh;
+}
+.two div{
+    
+    text-align: left;
+    
+    margin-top: 20px;
+    height: 300px;
+    width: 380px;
+    
+    background: rgba(208, 203, 203, 0.862);
+    margin-left: 20px;
+    margin-right: 100px;
+   border-radius:5%;
+
+
+}
+nav{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+
+
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+
+}
+nav a:hover{
+    background-color: #0ef0c6;
+
+    padding-top: 1px;
+    padding-bottom: small;
+    border-radius: 5px;   
+
+    
+}
+
+nav li:first-child{
+    margin-right: auto;
+    
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.208);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+
+}
+.sidebar a{
+    width: 100%;
+
+}
+.menu-button{
+    display: none;
+}
+
+
+
+@media(max-width: 800px)
+{
+    .hideOnMobile{
+        display: none;
+    }.menu-button{
+        display: block;
+    }
+}
+@media(max-width: 400px){
+
+.sidebar{
+    width: 100%
+}
+}
+.sec{
+    position: relative;
+    display: flex;
+    
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}

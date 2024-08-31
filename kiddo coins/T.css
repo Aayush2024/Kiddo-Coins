@@ -1,0 +1,202 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('wp11135480.webp'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    backdrop-filter: brightness(0.9);
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background-color: rgba(255, 209, 102, 0.9); /* Soft yellow */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5em;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Form Styling */
+form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    margin: 20px 0;
+}
+
+form label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #f5a623;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #fff3e0;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+form select:focus {
+    border-color: #f76c6c;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    background-color: #f76c6c; /* Bright coral */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #f44336; /* Darker coral */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Task Display Styling */
+#taskDisplay {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 90%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#taskDisplay h2 {
+    font-family: 'Fredoka One', cursive;
+    color: #f76c6c;
+    margin-bottom: 10px;
+}
+
+#taskDisplay p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Upload Section Styling */
+#uploadSection {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 90%;
+    margin: 20px 0;
+    display: none; /* Initially hidden */
+}
+
+#uploadSection h2 {
+    font-family: 'Fredoka One', cursive;
+    color: #4CAF50; /* Green */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#uploadForm input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #e8f5e9;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+#uploadForm input[type="file"]:focus {
+    border-color: #81c784;
+    outline: none;
+}
+
+#uploadForm .button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#uploadForm button:hover {
+    background-color: #388E3C; /* Darker green */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    form, #taskDisplay, #uploadSection {
+        padding: 20px;
+    }
+
+    form button, #uploadForm button {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    form label, #uploadSection h2 {
+        font-size: 1em;
+    }
+
+    #taskDisplay p {
+        font-size: 1em;
+    }
+}
+
+/* Additional Styling for Smooth Transitions */
+#uploadSection.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -1,0 +1,73 @@
+/* Base Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid #ffcc00;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3em;
+    color: #ff9900;
+    margin: 0;
+}
+
+#coinDisplay {
+    font-size: 1.5em;
+    color: #ffcc00;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Success Section Styles */
+#success {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#success h2 {
+    font-size: 2.5em;
+    color: #33cc33;
+    margin-bottom: 20px;
+}
+
+#success p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ff9900;
+    transform: translateY(-3px);
+}
